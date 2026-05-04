@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+message="${1:-update}"
+branch="$(git branch --show-current)"
+
+if [ -z "$branch" ]; then
+	echo "could not detect current branch" >&2
+	exit 1
+fi
+
+if [ "$branch" = "main" ]; then
+	echo "refusing to ship directly from main" >&2
+	exit 1
+fi
+
+has_script() {
+	node -e "process.exit(require('./package.json').scripts?.['$1'] ? 0 : 1)"
+}
+
+pnpm run check --silent
+pnpm run lint --silent
+
+if has_script test; then
+	pnpm run test --silent
+fi
+
+if has_script build; then
+	pnpm run build --silent
+fi
+
+git add .
+
+if git diff --cached --quiet; then
+	echo "nothing to commit"
+	exit 0
+fi
+
+git commit -m "$message"
+git fetch origin main
+git rebase origin/main
+git push -u origin "$branch"
+
+echo "shipped $branch with commit message: $message"
