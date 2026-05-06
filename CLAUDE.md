@@ -1,19 +1,36 @@
+# {PROJECT_NAME}
+
+## What this is
+
+{One paragraph. What the app does, who it's for.}
+
 ## Stack
 
-- SvelteKit + TypeScript + Tailwind v4
-- Convex (database + functions)
-- Convex Auth (sign in / session)
-- Stripe (payments)
-- Resend (email)
-- Railway (deploy)
-- Design system: @askoliveira/ui (imported in src/app.css)
+SvelteKit, TypeScript, Tailwind CSS, Convex, Railway
+
+## Conventions
+
+- Components: PascalCase, one per file, src/lib/components/
+- Stores: camelCase, src/lib/stores/
+- Types: src/lib/types.ts — extend, don't duplicate
+- Error handling: try/catch at API boundaries, let errors bubble in components
+- Tests: colocated .test.ts files
+
+## Commands
+
+- Dev: pnpm dev
+- Build: pnpm build
+- Test: bun test
+- Lint: pnpm lint
+
+## Design system
+
+@askoliveira/ui tokens. Dark mode. See src/lib/styles/
 
 ## Rules
 
-- Smallest sufficient change. Follow existing patterns.
-- No unrelated files. No new deps unless required.
-- Use pnpm, never npm.
-- Use design tokens from @askoliveira/ui. Don't introduce new colors,
-  fonts, or radii.
-- Inspect -> Plan -> Implement -> Review diff -> Run checks -> Fix failures.
-- Never claim tests passed if not run.
+- Read docs/PLAN.md and docs/SLICES.md before acting
+- Read docs/CONTEXT.md for current conventions
+- Only build what the current slice asks for
+- Do not refactor unrelated code
+- After integration passes, update docs/CONTEXT.md
