@@ -34,3 +34,5 @@ SvelteKit, TypeScript, Tailwind CSS, Convex, Railway
 - Only build what the current slice asks for
 - Do not refactor unrelated code
 - After integration passes, update docs/CONTEXT.md
+- Run bun test before stopping
+- Write tests for new behavior when building slices

@@ -33,3 +33,6 @@ SvelteKit, TypeScript, Tailwind CSS, Convex, Railway
 - Do not create files outside the slice's file list
 - Run dev server and verify before marking done
 - When done, summarize what was built and what was skipped
+- Run bun test before marking done
+- Write tests for new behavior in this slice
+- All tests must pass before stopping
