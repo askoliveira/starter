@@ -27,6 +27,8 @@ SvelteKit, TypeScript, Tailwind CSS, Convex, Railway
 
 ## Rules
 
+- Use [ship-verified.md](ship-verified.md) for build, ship, and merge workflow
+- Use [learn-by-building.md](learn-by-building.md) for learning walkthroughs
 - Read docs/PLAN.md and docs/CONTEXT.md before building
 - Only build what the current slice asks for
 - Do not refactor unrelated code
