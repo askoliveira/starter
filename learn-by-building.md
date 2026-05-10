@@ -23,14 +23,18 @@ User says `learn-by-building`, `explain this slice`, `walk me through this`, `te
 7. Connect code to behavior: visual UI, HTTP response, database effect, generated file, logs, or test output.
 8. End with one small exercise or prediction prompt that helps the user actively learn.
 9. Append a slice log entry to `docs/CONTEXT.md` under the `## Slice log` section:
+
    ```md
    ### Slice {N} — {title}
+
    - **Does**: {one sentence}
    - **Flow**: {input → transform → output, with file paths}
    - **Key files**: {file → why it exists}
    - **Connects to**: {what depends on this}
    ```
+
    Keep it to 3-5 lines. Write for a tool that has never seen this codebase.
+
 10. If this slice established new conventions, also update the Patterns or Conventions sections at the top of CONTEXT.md.
 
 ## Output

@@ -19,11 +19,21 @@ SvelteKit, TypeScript, Tailwind CSS, Convex, Railway
 
 - Dev: pnpm dev
 - Build: pnpm build
-- Test: bun test
+- Check: pnpm check
+- Lint: pnpm lint
+- Test: pnpm test, when a test script exists
+- UI: pnpm ui <brutal|northbound|stratum>
 
 ## Design system
 
-@askoliveira/ui tokens. Dark mode. See src/lib/styles/
+Choose exactly one UI system per project: `brutal`, `northbound`, or
+`stratum`.
+
+- Select it with `pnpm ui <choice>`.
+- The selected system is copied to `src/app.css`.
+- Source variants live in `src/lib/styles/design-systems/`.
+- Do not invent new colors, fonts, radii, shadows, or spacing tokens. Use the
+  selected system.
 
 ## Rules
 
@@ -35,6 +45,6 @@ SvelteKit, TypeScript, Tailwind CSS, Convex, Railway
 - Do not create files outside the slice's file list
 - Run dev server and verify before marking done
 - When done, summarize what was built and what was skipped
-- Run bun test before marking done
+- Run tests before marking done when a test script exists
 - Write tests for new behavior in this slice
 - All tests must pass before stopping

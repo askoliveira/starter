@@ -5,6 +5,8 @@ Last updated: {date}, after Slice {N}
 ## Patterns established
 
 - {e.g., "EvidenceEvent is the core type — all parsers output this"}
+- UI systems are selected with `pnpm ui <brutal|northbound|stratum>`, which copies a
+  source CSS file into `src/app.css`.
 
 ## Naming conventions
 
@@ -30,3 +32,10 @@ This is how the project accumulates knowledge. Both tools read this before actin
 - **Flow**: {input → transform → output, with file paths}
 - **Key files**: {file → why it exists}
 - **Connects to**: {what depends on this or what this depends on}
+
+### Slice 00 — Selectable UI systems
+
+- **Does**: Lets each new project choose exactly one visual system: brutal, northbound, or stratum.
+- **Flow**: `pnpm ui <choice>` → `scripts/select-ui.mjs` → copies `src/lib/styles/design-systems/<choice>.css` into `src/app.css`.
+- **Key files**: `scripts/select-ui.mjs` validates choices; `src/lib/styles/design-systems/` stores source variants; `src/app.css` is the active system.
+- **Connects to**: `$scaffold`, `$project-spinup`, `AGENTS.md`, and `CLAUDE.md` all expect a UI choice during setup.

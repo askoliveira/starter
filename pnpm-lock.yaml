@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@askoliveira/ui':
-        specifier: github:askoliveira/ui
-        version: https://codeload.github.com/askoliveira/ui/tar.gz/3c310d72c7c7b96b244ca5ab165cb33eaf781dfd
       '@convex-dev/auth':
         specifier: ^0.0.92
         version: 0.0.92(@auth/core@0.37.4)(convex@1.37.0)
@@ -83,10 +80,6 @@ importers:
         version: 8.0.10(@types/node@24.12.2)(esbuild@0.27.0)(jiti@2.6.1)
 
 packages:
-
-  '@askoliveira/ui@https://codeload.github.com/askoliveira/ui/tar.gz/3c310d72c7c7b96b244ca5ab165cb33eaf781dfd':
-    resolution: {tarball: https://codeload.github.com/askoliveira/ui/tar.gz/3c310d72c7c7b96b244ca5ab165cb33eaf781dfd}
-    version: 0.1.0
 
   '@auth/core@0.37.4':
     resolution: {integrity: sha512-HOXJwXWXQRhbBDHlMU0K/6FT1v+wjtzdKhsNg0ZN7/gne6XPsIrjZ4daMcFnbq0Z/vsAbYBinQhhua0d77v7qw==}
@@ -1671,8 +1664,6 @@ packages:
     resolution: {integrity: sha512-B58NGBEoc8Y9MWWCQGl/gq9xBCe4IiKM0a2x7GZdQKOW5Exr8S1W24J6OgM1njK8xCRGvAJIL/MxXHf6SkmQKQ==}
 
 snapshots:
-
-  '@askoliveira/ui@https://codeload.github.com/askoliveira/ui/tar.gz/3c310d72c7c7b96b244ca5ab165cb33eaf781dfd': {}
 
   '@auth/core@0.37.4':
     dependencies:
