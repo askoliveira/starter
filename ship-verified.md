@@ -77,6 +77,7 @@ End of Merge Phase: confirmation of merge + next-chat handoff prompt using this 
 We are working in <repo path>.
 
 Current state:
+
 - <previous slice> is complete, merged to main.
 - <plan file> is the source of truth.
 - Follow AGENTS.md.
@@ -93,6 +94,7 @@ Run `/worktree-open <N>` first, then `cd` into the worktree and read <plan file>
 Implement <next slice> only.
 
 Important:
+
 - Build phase only unless I explicitly say "ship it".
 - Do not execute future slices.
 - Preserve the slice non-goals.
@@ -101,6 +103,7 @@ Important:
 - Verify behavior before stopping.
 
 At the end, summarize:
+
 - What changed
 - What checks passed
 - What behavior was verified

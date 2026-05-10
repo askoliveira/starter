@@ -8,6 +8,7 @@
 		"build": "sh -c 'vite build'",
 		"start": "node build",
 		"preview": "vite preview",
+		"ui": "node scripts/select-ui.mjs",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "sh -c 'svelte-kit sync && svelte-check --tsconfig ./tsconfig.json'",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -36,7 +37,6 @@
 		"vite": "^8.0.7"
 	},
 	"dependencies": {
-		"@askoliveira/ui": "github:askoliveira/ui",
 		"@convex-dev/auth": "^0.0.92",
 		"convex": "^1.37.0",
 		"resend": "^6.12.2",
